@@ -2,10 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:readinghabit/article_detail_screen.dart';
 import 'package:readinghabit/model/article_list.dart';
 
-// article list screen  : main screen
-// article detail screen: detail screen
-// tourism place        : article
-
 class ArticleListScreen extends StatelessWidget {
   final String screenName;
   final bool isFav;
@@ -43,7 +39,6 @@ class ArticleListScreen extends StatelessWidget {
 }
 
 List<Article> newList = articleList;
-// newList.where((x) => x.isFavorite).toList();
 
 class ArticleList extends StatelessWidget {
   final bool isFav;
