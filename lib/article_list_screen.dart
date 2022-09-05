@@ -46,12 +46,12 @@ class ArticleList extends StatelessWidget {
   const ArticleList({Key? key, required this.isFav}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    newList = articleList;
+    if (isFav) {
+      newList = articleList.where((x) => x.isFavorite).toList();
+    }
     return ListView.builder(
       itemBuilder: (context, index) {
-        newList = articleList;
-        if (isFav) {
-          newList = articleList.where((x) => x.isFavorite).toList();
-        }
         final Article article = newList[index];
         return InkWell(
           onTap: () {
